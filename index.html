@@ -309,20 +309,20 @@
             <hr class="my-8">
           </div>
           <div class="w-64 text-center -mt-6">
-            <button id="purchase-btn" class="bg-[#E527B2] py-2 w-4/5 rounded text-white disabled:bg-opacity-30
+            <button onclick="my_modal_5.showModal()" id="purchase-btn" class="bg-[#E527B2] py-2 w-4/5 rounded text-white disabled:bg-opacity-30
             " disabled>Make Purchase</button>
           </div>
           
           <!-- Open the modal using ID.showModal() method -->
-          <dialog class="modal modal-middle sticky w-fit mx-auto">
+          <dialog id="my_modal_5" class="modal modal-middle sticky w-fit mx-auto">
             <form method="dialog" class="modal-box text-center mx-4 md:mx-12">
 
               <img src="./photos/modalImage.png" alt="Modal Logo" class="w-1/3 mx-auto mt-6">
               <h2 class="text-3xl md:text-4xl font-bold mt-4"> Congratulations</h2>
               <p class="text-xs md:text-base  text-slate-400 my-3">You Purchased the product</p>
-              <div class="modal-action">
+              <div id="modal-btn" class="modal-action">
                 <!-- if there is a button in form, it will close the modal -->
-                <button class="bg-[#E527B2] py-2 px-4 w-auto rounded text-white disabled:bg-opacity-30
+                <button id="modal-btn" class="bg-[#E527B2] py-2 px-4 w-auto rounded text-white disabled:bg-opacity-30
                 mx-auto mb-6">Go Home</button>
               </div>
             </form>

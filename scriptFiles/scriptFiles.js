@@ -61,6 +61,27 @@ for (let card of cards) {
     }
     const grandTotalContainer = document.getElementById("grand-total");
     grandTotalContainer.innerText = (totalPrice - discount).toFixed(2);
+
+    // to go home and clear the History
+  document.getElementById("modal-btn").addEventListener("click", function () {
+    document.getElementById("coupon-input-field").value = "";
+    document.getElementById("item-container").innerHTML = "";
+    document.getElementById("total-price-container").innerText = "0.00";
+    document.getElementById("discount").innerText = "0.00";
+    document.getElementById("grand-total").innerText = "0.00";
+    document.getElementById("apply-btn").setAttribute("disabled", "disabled");
+    document.getElementById("coupon-input-field").setAttribute("disabled", "disabled");
+    document
+      .getElementById("purchase-btn")
+      .setAttribute("disabled", "disabled");
+
+    // to remove previous count
+    totalPrice = 0;
+  });
+  return totalPrice;
+
   }
   card.addEventListener("click", handleCart);
 }
+
+
