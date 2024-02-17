@@ -287,9 +287,9 @@
           <div class="bg-white p-2 w-64 mb-10 rounded">
             <h4 class="">Have coupon?</h4>
             <div class="flex  mt-4">
-              <input type="text" class="p-2 rounded-l-lg text-center w-40 font-normal border"
-                placeholder="Coupon code">
-              <button id="apply-btn" class="bg-[#E527B2] py-2 w-20  text-white rounded-r-lg disabled:bg-opacity-30" disabled>Apply</button>
+              <input id="coupon-input-field" type="text" class="p-2 rounded-l-lg text-center w-40 font-normal border-[2px]"
+                placeholder="Coupon code" disabled>
+              <button id="apply-btn" class="bg-[#E527B2] py-2 w-20  text-white rounded-r-lg disabled:bg-opacity-30 border-[#E527B2] border-[2px]" disabled>Apply</button>
             </div>
           </div>
 
@@ -303,7 +303,7 @@
             
             <div>
               <p class="text-lg">Total price: <span id="total-price-container">0.00</span> TK</p>
-              <p class="text-lg">Discount: <span>0.00</span> TK</p>
+              <p class="text-lg">Discount: <span id="discount">0.00</span> TK</p>
               <p class="text-lg">Grand Total: <span id="grand-total">0.00</span> TK</p>
             </div>
             <hr class="my-8">
