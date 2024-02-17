@@ -1,4 +1,6 @@
 let initialNumber = 1;
+let totalPrice = 0;
+let discount = 0;
 
 const cards = document.querySelectorAll('.card');
 for(let card of cards){
@@ -19,6 +21,19 @@ for(let card of cards){
     newP.innerText = initialNumber + ' ' + title;
     container.appendChild(newP);
     initialNumber++;
+
+    //add items price in the cart
+    totalPrice = totalPrice + parseFloat(priceValue);
+    const totalPriceContainer = document.getElementById('total-price-container');
+    totalPriceContainer.innerText = totalPrice.toFixed(2);
+
+    
+
+
+    // grand Total
+    const grandTotalContainer = document.getElementById('grand-total');
+    grandTotalContainer.innerText = (totalPrice - discount).toFixed(2);
+    
 
 
   }card.addEventListener('click', handleCart);
