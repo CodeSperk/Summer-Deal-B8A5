@@ -22,13 +22,18 @@ for(let card of cards){
     container.appendChild(newP);
     initialNumber++;
 
-    //add items price in the cart
+    //total price in the cart
     totalPrice = totalPrice + parseFloat(priceValue);
     const totalPriceContainer = document.getElementById('total-price-container');
     totalPriceContainer.innerText = totalPrice.toFixed(2);
-
     
-
+    //enable coupon & make purchase button
+    if(totalPrice>0){
+      document.getElementById('purchase-btn').removeAttribute('disabled');
+    }
+    if(totalPrice>=200){
+      document.getElementById('apply-btn').removeAttribute('disabled')
+    }
 
     // grand Total
     const grandTotalContainer = document.getElementById('grand-total');
