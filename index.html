@@ -118,7 +118,6 @@
 
                 <h2 class="card-title text-xl lg:text-lg xl:text-xl font-semibold">Accessories2</h2>
                 <p class="text-base xl:text-lg text-slate-500">39.00 TK</p>
-
               </div>
             </div>
           </div>
@@ -297,9 +296,12 @@
 
           <!-- cart prices -->
           <div class="bg-white p-4 w-64 rounded">
-            <ol class="list-decimal ml-6">
+            <ol id="item-container" class="list-decimal ml-6">
+
             </ol>
+
             <hr class="my-4">
+            
             <div>
               <p>Total price: <span class=" text-lg text-slate-500">0.00</span><span
                   class="text-lg text-slate-500">TK</span></p>
@@ -314,6 +316,7 @@
             <button class="bg-[#E527B2] py-2 w-4/5 rounded text-white disabled:bg-opacity-30
             " disabled>Make Purchase</button>
           </div>
+          
           <!-- Open the modal using ID.showModal() method -->
           <dialog class="modal modal-middle sticky w-fit mx-auto">
             <form method="dialog" class="modal-box text-center mx-4 md:mx-12">
